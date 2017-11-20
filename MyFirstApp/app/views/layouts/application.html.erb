@@ -12,7 +12,7 @@
   <body class='<%= controller.controller_name %>'>
     <div id="banner">
       <%= image_tag 'logo.svg', alt: 'The Pragmatic Bookshelf' %>
-      <span class="title"><%= @page_title %></span>
+      <span class="title"> <strong>P</strong>RAGMATIC <strong>B</strong>OOKSHELF</span>
     </div>
 
     <div id="columns">
@@ -26,11 +26,21 @@
         </div>
         
         <ul>
-          <li><a href="http://www....">Home</a></li>
-          <li><a href="http://www..../faq">Questions</a></li>
-          <li><a href="http://www..../news">News</a></li>
-          <li><a href="http://www..../contact">Contact</a></li>
+          <li><a href="http://localhost:3000">Home</a></li>
+          <li><a href="http://localhost:3000/faq">Questions</a></li>
+          <li><a href="http://localhost:3000/news">News</a></li>
+          <li><a href="http://localhost:3000/contact">Contact</a></li>
         </ul>
+
+        <% if session[:user_id] %>
+          <ul>
+            <li><%= link_to  "Orders", orders_path %></li>
+            <li><%= link_to  "Products", products_path %></li>
+            <li><%= link_to  "Users", users_path %></li>
+          </ul>
+          <%= button_to  "Logout", logout_path, method: :delete %>
+        <% end %>
+
       </div>
 
       <div id="main">
