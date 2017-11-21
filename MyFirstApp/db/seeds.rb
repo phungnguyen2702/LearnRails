@@ -7,6 +7,8 @@
 # Visit http://www.pragmaticprogrammer.com/titles/rails5 for more book information.
 #---
 # encoding: utf-8
+Order.delete_all
+Cart.delete_all
 Product.delete_all
 Product.create!(title: 'Rails, Angular, Postgres, and Bootstrap',
   description:
@@ -53,3 +55,11 @@ Product.create!(title: 'Ruby Performance Optimization',
       </p>},
   image_url: 'adrpo.jpg',
   price: 46.00)
+
+  Product.create!(title: 'Programming Ruby 1.9',
+  description: 
+    %{<p><em>Ruby is the fastest growing and most exciting dynamic
+    language out there</em>. If you need to get working programs
+    delivered fast, you should add Ruby to your toolbox.</p>},
+  image_url:   'ruby.png',
+  price:       49.50 )
