@@ -1,5 +1,4 @@
 es:
-
   number:
     currency:
       format:
@@ -10,6 +9,14 @@ es:
         format:    "%n&nbsp;%u"
 
   activerecord:
+    models:
+      order:       "pedido"
+    attributes:
+      order:
+        address:   "Direcci&oacute;n"
+        name:      "Nombre"
+        email:     "E-mail"
+        pay_type:  "Forma de pago"
     errors:
       messages:
         inclusion: "no est&aacute; incluido en la lista"
@@ -52,3 +59,24 @@ es:
       submit:       "Realizar Pedido"
 
   thanks:          "Gracias por su pedido"
+
+  users:
+    form:
+      legend:                 "Ingrese los detalles del usuario"
+      name:                   "Nombre:"
+      password:               "Contraseña:"
+      password_confirmation:  "Confirmar:"
+      submit:                 "Iniciar sesión"
+    new:
+      title:  "Nuevo Usuario"
+    edit:
+      title:  "Editando Usuario"
+    index:
+      user:   "Usuarios"
+      name:   "Nombre"
+
+  session:
+    new:
+      name:     "Nombre:"
+      password: "Contraseña:"
+      submit:   "Iniciar sesión"
