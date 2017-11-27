@@ -9,4 +9,13 @@ class StoreController < ApplicationController
       @products = Product.order(:title)
     end
   end
+
+  def news
+  end
+  
+  def contact
+  end
+
+  def question
+  end
 end
